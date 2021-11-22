@@ -1,7 +1,22 @@
 import React from "react";
+import Linkform from "./linkform";
 
-const links=()=>{
-    return <h1>links</h1>;
+import { db } from '../firebase'
+
+
+const links = () => {
+
+    const anadirOEditarEnlace = async(linkObject) => {
+        await db.collection('links').doc().set(linkObject);
+        console.log('Nueva Tarea Agregada')
+    }
+
+    return <div >
+        <
+        Linkform anadirOEditarEnlace = { anadirOEditarEnlace }
+    /> <
+    h1 > links < /h1> <
+        /div>;
 }
 
 export default links;
