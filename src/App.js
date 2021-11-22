@@ -4,15 +4,12 @@ import Links from "./Components/links";
 import Linkform from "./Components/linkform";
 
 function App() {
-    return ( <
-        div className = "container p-4" >
-        <
-        div className = "row" >
-        <
-        Links / >
-        <
-        /div> <
-        /div>
+  return (
+    <div className="container p-4">
+      <div className="row">
+      <Links/>
+      </div>
+    </div>
     );
 }
 
