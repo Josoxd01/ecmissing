@@ -3,13 +3,14 @@ import Linkform from "./linkform";
 
 import {db} from '../firebase'
 
-
 const links=()=>{
 
     const addoredit=async (linkObject)=>{
         await db.collection('Desaparecidos').doc().set(linkObject);
         console.log('Nueva Tarea Agregada')
-    }
+    };
+
+
 
     return <div>
         <Linkform  addoredit={addoredit}/>
