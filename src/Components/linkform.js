@@ -30,7 +30,6 @@ const Linkform = (props) => {
             placeholder="https://someurl.com" 
             name="url"
             onChange={handleInputChange}
-            value = {values.url} 
             />
         </div>
 
@@ -39,16 +38,10 @@ const Linkform = (props) => {
                 <i className="material-icons">create</i>
             </div>
 
-            <input type="text" className="form-control" name="name" placeholder="Nombre del Sitio Web" 
-            onChange={handleInputChange}
-            value ={values.name}
-            />
+            <input type="text" className="form-control" name="name" placeholder="Nombre del Sitio Web" onChange={handleInputChange}/>
         </div>
         <div className="form-group">
-            <textarea name="description" rows="3" className="form-control" placeholder="Escribir descripcion" 
-            onChange={handleInputChange}
-            value = {values.description}
-            ></textarea>
+            <textarea name="description" rows="3" className="form-control" placeholder="Escribir descripcion" onChange={handleInputChange}></textarea>
             
         </div>
         <button className="btn btn-primary btn-block">Guardar</button>

@@ -12,7 +12,7 @@ const links=()=>{
     }
 
     return <div>
-        <Linkform  anadirOEditarEnlace={anadirOEditarEnlace}/>
+        <linkform  anadirOEditarEnlace={anadirOEditarEnlace}/>
         <h1>links</h1>
     </div>;
 }
