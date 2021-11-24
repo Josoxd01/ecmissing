@@ -6,13 +6,13 @@ import {db} from '../firebase'
 
 const links=()=>{
 
-    const anadirOEditarEnlace=async (linkObject)=>{
-        await db.collection('links').doc().set(linkObject);
+    const addoredit=async (linkObject)=>{
+        await db.collection('Desaparecidos').doc().set(linkObject);
         console.log('Nueva Tarea Agregada')
     }
 
     return <div>
-        <Linkform  anadirOEditarEnlace={anadirOEditarEnlace}/>
+        <Linkform  addoredit={addoredit}/>
         <h1>links</h1>
     </div>;
 }
