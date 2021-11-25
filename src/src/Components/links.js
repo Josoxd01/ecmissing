@@ -1,6 +1,6 @@
 import React from "react";
 import Linkform from "./linkform";
-
+import {toast} from'react-toastify';
 import {db} from '../firebase'
 
 

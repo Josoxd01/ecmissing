@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { db } from "../firebase";
+
 const Linkform = (props) => { 
 
   const initialStateValues={
@@ -19,6 +21,20 @@ const Linkform = (props) => {
         props.addoredit(values);
         setValues({...initialStateValues})
     };
+
+    const getById = async (id) => {
+        const doc = await db.collection("Desaparecidos").doc(id).get();
+        setValues({ ...doc.data() });
+      };
+
+    useEffect(() => {
+        if (props.currentId === "") {
+          setValues({ ...initialStateValues });
+        } else {
+          getById(props.currentId);
+        }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [props.currentId]);
 
     return ( 
         <form className = "card card-body" onSubmit={handleSubmit} >
@@ -61,7 +77,9 @@ const Linkform = (props) => {
             ></textarea>
             
         </div>
-        <button className="btn btn-primary btn-block">Guardar</button>
+        <button className="btn btn-primary btn-block">
+        {props.currentId === "" ? "Guardar" : "Actualizar"}
+        </button>
         </form>
     );
 };
