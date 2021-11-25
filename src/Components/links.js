@@ -63,15 +63,15 @@ const Links=()=>{
                 <div className ="card mb-2" key = {link.id}>
                     <div className ="card-body">
                     <div className ="d-flex justify-content-between">
-                    <h3>{link.Nombre}</h3>
+                    <h3>Nombre: {link.Nombre}</h3>
                         <div>
                         <i className = "material-icons text-danger" onClick= {() => Eliminar(link.id)}>close</i>
                         <i className = "material-icons" onClick= {() => setCurrentId(link.id)} >create</i>
                         </div>
                     </div>
-                      <p>{link.Edad}</p>
-                      <p>{link.Descripcion}</p>
-                      <p>{link.Telefono} </p>
+                      <p>Edad: {link.Edad}</p>
+                      <p>Descipcion:  {link.Descripcion}</p>
+                      <p>Telefono: {link.Telefono} </p>
                     </div>
                 </div>
             ))}
