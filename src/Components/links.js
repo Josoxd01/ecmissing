@@ -69,6 +69,7 @@ const Links=()=>{
                         <i className = "material-icons" onClick= {() => setCurrentId(link.id)} >create</i>
                         </div>
                     </div>
+                      <img src={link.ImagenUrl} height="100px" width="100px" />
                       <p>Edad: {link.Edad}</p>
                       <p>Descipcion:  {link.Descripcion}</p>
                       <p>Telefono: {link.Telefono} </p>

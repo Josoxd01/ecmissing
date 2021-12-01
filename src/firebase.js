@@ -1,6 +1,7 @@
 //import { initializeApp } from "firebase/app";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+import "firebase/compat/storage";
 const firebaseConfig = {
     apiKey: "AIzaSyCabJrseFKa_f8Mobf55g6XiAqdmKxu0vA",
     authDomain: "ecmissing.firebaseapp.com",
@@ -12,5 +13,6 @@ const firebaseConfig = {
 // Initialize Firebase
 
 const fb=firebase.initializeApp(firebaseConfig);
-export const db=fb.firestore();
+export const st=fb.storage();
+export const db=fb.firestore(); 
 //export default firebase;
