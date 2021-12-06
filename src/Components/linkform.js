@@ -8,7 +8,7 @@ const Linkform = (props) => {
         Edad: "",
         Telefono: "",
         Descripcion: "",
-        ImagenUrl:"",
+        ImagenUrl:Imagen,
     };
     
 
@@ -69,9 +69,15 @@ const Linkform = (props) => {
         }
       };*/
       const imprimir=()=>{
-          setImagen("No generado");
-          console.log("ahh:"+Imagen);
-      }
+        console.log("ahh: "+Imagen);
+        console.log("ohh: "+values.ImagenUrl)
+        alert("Imagen Confirmada")
+        //  <text onClick={imprimir2}>link:{Imagen}</text>
+          //<text>link:{Imagen}</text> 
+//            <button onClick={imprimir}>Confirmar Imagen</button>
+
+    }
+
 
 
     return (
@@ -79,7 +85,8 @@ const Linkform = (props) => {
             <div>
             <input type="file" onChange={CargarImagen} />
             </div>
-            <text>link:{Imagen}</text>
+            <img src={Imagen} height="100px" width="100px" />
+            <button onClick={imprimir}>Confirmar Imagen</button>
             <div className="form-group input-group">
                 <div className="input-group-text bg-light">
                     <i className="material-icons">create</i>
@@ -120,12 +127,7 @@ const Linkform = (props) => {
                 ></textarea>
 
             </div>
-            <div className="form-group">
-                <textarea name="ImagenUrl" rows="1" className="form-control" placeholder="Copie el link generado" onChange={handleInputChange}
-                    value={values.ImagenUrl}
-                ></textarea>
-
-            </div>
+           
             <button className="btn btn-primary btn-block" >
                 {props.currentId === "" ? "Guardar" : "Actualizar"}
             </button>
